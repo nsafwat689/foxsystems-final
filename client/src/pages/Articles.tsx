@@ -158,9 +158,7 @@ export default function Articles() {
               {language === "en" ? "العربية" : "EN"}
             </button>
           </div>
-        </div>
-      </nav>
-
+</nav>
       {/* Header Section */}
       <section className="bg-gradient-to-br from-primary/10 via-transparent to-primary/5 py-16 md:py-24">
         <div className="container">
