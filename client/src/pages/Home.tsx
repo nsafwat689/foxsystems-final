@@ -34,11 +34,11 @@ const translations = {
     home: "Home",
     services: "Services",
     articles: "Articles",
+                faq: "FAQ",
     about: "About",
     contact: "Contact",
     heroTitle: "Enterprise IT Solutions & Services",
     heroSubtitle:
-                  faq: "FAQ",
       "Trusted by businesses for over 14 years. CRM systems, cybersecurity, networking, and infrastructure solutions.",
     heroBtn: "Get Started",
     whatsappBtn: "WhatsApp Us",
