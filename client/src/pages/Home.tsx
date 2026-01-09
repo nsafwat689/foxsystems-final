@@ -38,6 +38,7 @@ const translations = {
     contact: "Contact",
     heroTitle: "Enterprise IT Solutions & Services",
     heroSubtitle:
+                  faq: "FAQ",
       "Trusted by businesses for over 14 years. CRM systems, cybersecurity, networking, and infrastructure solutions.",
     heroBtn: "Get Started",
     whatsappBtn: "WhatsApp Us",
@@ -99,6 +100,7 @@ const translations = {
     contact: "اتصل",
     heroTitle: "حلول وخدمات تكنولوجيا المعلومات للمؤسسات",
     heroSubtitle:
+                  faq: "الأسئلة الشائعة",
       "موثوق به من قبل الشركات لأكثر من 14 سنة. أنظمة CRM والأمن السيبراني والشبكات وحلول البنية التحتية.",
     heroBtn: "ابدأ الآن",
     whatsappBtn: "واتس آب",
@@ -205,6 +207,9 @@ export default function Home() {
               <Link href="/articles" className="text-sm font-medium hover:text-primary transition">
                 {t.articles}
               </Link>
+                              <Link href="/faq" className="text-sm font-medium hover:text-primary transition">
+                  {t.faq}
+                </Link>
               <a href="#about" className="text-sm font-medium hover:text-primary transition">
                 {t.about}
               </a>
