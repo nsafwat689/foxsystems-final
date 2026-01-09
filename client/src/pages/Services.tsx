@@ -308,7 +308,7 @@ const translations = {
 
 export default function Services() {
   const [language, setLanguage] = useState<"en" | "ar">("en");
-  const { them, toggleThemee } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const t = translations[language];
   const isArabic = language === "ar";
 
