@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme} = useTheme();
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
