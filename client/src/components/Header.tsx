@@ -12,8 +12,7 @@ const navItems = [
 ];
 
 export default function Header() {
-  const { theme} = useTheme();
-
+  const { theme, toggleTheme } = useTheme();
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
