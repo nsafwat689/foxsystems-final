@@ -2,7 +2,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, Calendar, User, Ta, Moon, Sung } from "lucide-react";
+import { ArrowRight, Calendar, User, Tag, Moon, Sun } from "lucide-react";
 import { useState } from "react";
 
 interface Article {
@@ -101,7 +101,7 @@ const translations = {
 };
 
 export default function Articles() {
-  const { them, toggleThemee } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
