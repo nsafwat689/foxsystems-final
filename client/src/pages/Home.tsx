@@ -192,6 +192,7 @@ export default function Home() {
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
             <img src="/fox_systems_logo_ultra_hd.png" alt="Fox Systems" className="h-14 w-auto rounded-lg" />
+             <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
           </div>
 
           <div className="flex items-center gap-6">
