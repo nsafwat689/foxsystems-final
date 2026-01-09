@@ -14,6 +14,8 @@ import {
   ArrowRight,
   CheckCircle,
   MessageCircle,
+ Moon,
+ Sun,
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -306,7 +308,7 @@ const translations = {
 
 export default function Services() {
   const [language, setLanguage] = useState<"en" | "ar">("en");
-  const { theme } = useTheme();
+  const { them, toggleThemee } = useTheme();
   const t = translations[language];
   const isArabic = language === "ar";
 
@@ -423,9 +425,35 @@ export default function Services() {
           </Link>
 
           <div className="flex items-center gap-4">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition">
+<div className="hidden md:flex gap-6">
+            <Link href="/services" className="text-sm font-medium hover:text-primary transition">
+              {isArabic ? "الخدمات" : "Services"}
+            </Link>
+            <Link href="/articles" className="text-sm font-medium hover:text-primary transition">
+              {isArabic ? "المقالات" : "Articles"}
+            </Link>
+            <Link href="/faq" className="text-sm font-medium hover:text-primary transition">
+              {t.faq}
+            </Link>
+            <a href="#about" className="text-sm font-medium hover:text-primary transition">
+              {t.about}
+            </a>
+            <a href="#contact" className="text-sm font-medium hover:text-primary transition">
+              {t.contact}
+            </a>
+            </div>
+            
+      <Link href="/" className="text-sm font-medium hover:text-primary transition">
               {t.home}
             </Link>
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-muted transition"
+              title={theme === "light" ? "Dark mode" : "Light mode"}
+            >
+              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+            </button>
+            
             <button
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
               className="px-3 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
