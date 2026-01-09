@@ -308,7 +308,7 @@ const translations = {
 
 export default function Services() {
   const [language, setLanguage] = useState<"en" | "ar">("en");
-  const { theme, toggleTheme } = useTheme();
+  const { them, toggleThemee } = useTheme();
   const t = translations[language];
   const isArabic = language === "ar";
 
@@ -447,7 +447,7 @@ export default function Services() {
               {t.home}
             </Link>
             <button
-              onClick={toggleTheme}
+              onClick={toggleThemee}
               className="p-2 rounded-lg hover:bg-muted transition"
               title={theme === "light" ? "Dark mode" : "Light mode"}
             >
