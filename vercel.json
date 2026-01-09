@@ -1,6 +1,6 @@
 {
   "buildCommand": "cd client && npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "client/dist",
   "rewrites": [
     {
       "source": "/(.*)",
