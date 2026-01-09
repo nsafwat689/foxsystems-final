@@ -101,7 +101,7 @@ const translations = {
 };
 
 export default function Articles() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
