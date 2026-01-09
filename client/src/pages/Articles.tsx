@@ -136,7 +136,7 @@ export default function Articles() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <img src="/logo.jpg" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
+            <img src="/fox_systems_logo_matching.png" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
             <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
           </Link>
 
