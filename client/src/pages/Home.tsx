@@ -157,7 +157,7 @@ export default function Home() {
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [showChat, setShowChat] = useState(false);
   const [activeServiceTab, setActiveServiceTab] = useState("all");
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const t = translations[language];
   const isArabic = language === "ar";
 
