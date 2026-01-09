@@ -162,8 +162,8 @@ export default function Home() {
     { icon: Cpu, title: t.crm, desc: t.crmDesc, category: "software", image: "/crm-solution.jpg" },
     { icon: Shield, title: t.firewall, desc: t.firewallDesc, category: "security", image: "/firewall-security.jpg" },
     { icon: Network, title: t.networking, desc: t.networkingDesc, category: "networking", image: "/it-services.jpg" },
-    { icon: Server, title: t.domainServices, desc: t.domainDesc, category: "infrastructure", image: "/hero-tech.jpg" },
-    { icon: Globe, title: t.websites, desc: t.websitesDesc, category: "software", image: "/hero-tech.jpg" },
+    { icon: Server, title: t.domainServices, desc: t.domainDesc, category: "infrastructure", image: "/pngtree-businessman-hand-holds-social-network-mobile-connections-growth-photo-image_32274222.jpg.jpg" },
+    { icon: Globe, title: t.websites, desc: t.websitesDesc, category: "software", image: "/pngtree-businessman-hand-holds-social-network-mobile-connections-growth-photo-image_32274222.jpg.jpg" },
     { icon: Zap, title: t.infrastructure, desc: t.infrastructureDesc, category: "infrastructure", image: "/it-services.jpg" },
     { icon: Users, title: t.hardware, desc: t.hardwareDesc, category: "hardware", image: "/firewall-security.jpg" },
     { icon: Phone, title: t.support, desc: t.supportDesc, category: "support", image: "/crm-solution.jpg" },
@@ -265,7 +265,7 @@ export default function Home() {
 
             <div className="relative">
               <img
-                src="/hero-tech.jpg"
+                src="/pngtree-businessman-hand-holds-social-network-mobile-connections-growth-photo-image_32274222.jpg.jpg"
                 alt="Technology Solutions"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
