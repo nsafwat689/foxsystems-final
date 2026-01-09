@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-"build": "npx vite build client --outDir dist",    "check": "tsc --noEmit",
-    "format": "prettier --write .",
+"build": "vite build && echo 'Build complete',    "format": "prettier --write .",
     "test": "vitest run",
     "db:push": "drizzle-kit generate && drizzle-kit migrate"
   },
