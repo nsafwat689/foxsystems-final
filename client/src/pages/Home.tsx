@@ -191,8 +191,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img src="/logo.jpg" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
-            <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
+            <img src="/logo.jpg" alt="Fox Systems" className="h-14 w-auto rounded-lg" />
           </div>
 
           <div className="flex items-center gap-6">
