@@ -1,32 +1,18 @@
-import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Link } from "wouter";
 import { Moon, Sun } from "lucide-react";
 
-const translations = {
-  en: {
-    services: "Services",
-    articles: "Articles",
-    faq: "FAQ",
-    about: "About",
-    contact: "Contact",
-    language: "العربية",
-  },
-  ar: {
-    services: "الخدمات",
-    articles: "المقالات",
-    faq: "الأسئلة الشائعة",
-    about: "حول",
-    contact: "اتصل",
-    language: "EN",
-  },
-};
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/services", labelEn: "Services", labelAr: "الخدمات" },
+  { href: "/articles", labelEn: "Articles", labelAr: "المقالات" },
+  { href: "/faq", labelEn: "FAQ", labelAr: "الأسئلة الشائعة" },
+  { href: "#about", labelEn: "About", labelAr: "حول" },
+  { href: "#contact", labelEn: "Contact", labelAr: "اتصل" },
+];
 
 export default function Header() {
-  const [language, setLanguage] = useState<"en" | "ar">("en");
   const { theme, toggleTheme } = useTheme();
-  const t = translations[language];
-  const isArabic = language === "ar";
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
@@ -40,47 +26,20 @@ export default function Header() {
         </Link>
 
         {/* Navigation Links */}
-        <div className={`flex items-center gap-6 ${isArabic ? "flex-row-reverse" : ""}`}>
-          <Link
-            href="/"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/services"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            {t.services}
-          </Link>
-          <Link
-            href="/articles"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            {t.articles}
-          </Link>
-          <Link
-            href="/faq"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            {t.faq}
-          </Link>
-          <a
-            href="#about"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            {t.about}
-          </a>
-          <a
-            href="#contact"
-            className="text-sm font-medium hover:text-primary transition-colors"
-          >
-            {t.contact}
-          </a>
+        <div className="flex items-center gap-6">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              {item.labelEn}
+            </Link>
+          ))}
         </div>
 
         {/* Right Actions */}
-        <div className={`flex items-center gap-2 ${isArabic ? "flex-row-reverse" : ""}`}>
+        <div className="flex items-center gap-2">
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
@@ -96,10 +55,13 @@ export default function Header() {
 
           {/* Language Toggle */}
           <button
-            onClick={() => setLanguage(language === "en" ? "ar" : "en")}
             className="px-3 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"
+            onClick={() => {
+              // Language switching can be implemented later
+              window.location.href = "#"; // Placeholder
+            }}
           >
-            {t.language}
+            العربية
           </button>
         </div>
       </nav>
