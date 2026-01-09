@@ -2,7 +2,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, Calendar, User, Tag } from "lucide-react";
+import { ArrowRight, Calendar, User, Ta, Moon, Sung } from "lucide-react";
 import { useState } from "react";
 
 interface Article {
@@ -101,7 +101,7 @@ const translations = {
 };
 
 export default function Articles() {
-  const { theme } = useTheme();
+  const { them, toggleThemee } = useTheme();
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -140,7 +140,8 @@ export default function Articles() {
             <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
           </Link>
 
-          <div className="flex items-center gap-4">
+          150
+          
             <Link href="/" className="text-sm font-medium hover:text-primary transition">
               {t.home}
             </Link>
