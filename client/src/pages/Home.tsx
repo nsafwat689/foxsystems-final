@@ -1,6 +1,4 @@
-181
-// Cache bust - v2
-  import { useState } from "react";
+import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,7 +32,6 @@ const translations = {
     home: "Home",
     services: "Services",
     articles: "Articles",
-                faq: "FAQ",
     about: "About",
     contact: "Contact",
     heroTitle: "Enterprise IT Solutions & Services",
@@ -96,7 +93,6 @@ const translations = {
     home: "الرئيسية",
     services: "الخدمات",
     articles: "المقالات",
-                      faq: "الأسئلة الشائعة",
     about: "حول",
     contact: "اتصل",
     heroTitle: "حلول وخدمات تكنولوجيا المعلومات للمؤسسات",
@@ -157,7 +153,7 @@ export default function Home() {
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const [showChat, setShowChat] = useState(false);
   const [activeServiceTab, setActiveServiceTab] = useState("all");
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const t = translations[language];
   const isArabic = language === "ar";
 
@@ -195,8 +191,8 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img src="/fox_systems_logo_matching.png" alt="Fox Systems" className="h-14 w-auto rounded-lg" />
-             <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
+            <img src="/logo.jpg" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
+            <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -207,9 +203,6 @@ export default function Home() {
               <Link href="/articles" className="text-sm font-medium hover:text-primary transition">
                 {t.articles}
               </Link>
-                              <Link href="/faq" className="text-sm font-medium hover:text-primary transition">
-                  {t.faq}
-                </Link>
               <a href="#about" className="text-sm font-medium hover:text-primary transition">
                 {t.about}
               </a>

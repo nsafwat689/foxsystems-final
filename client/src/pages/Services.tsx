@@ -14,8 +14,6 @@ import {
   ArrowRight,
   CheckCircle,
   MessageCircle,
- Moon,
- Sun,
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -308,7 +306,7 @@ const translations = {
 
 export default function Services() {
   const [language, setLanguage] = useState<"en" | "ar">("en");
-  const { them, toggleThemee } = useTheme();
+  const { theme } = useTheme();
   const t = translations[language];
   const isArabic = language === "ar";
 
@@ -420,40 +418,14 @@ export default function Services() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <img src="/fox_systems_logo_matching.png" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
+            <img src="/logo.jpg" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
             <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
           </Link>
 
           <div className="flex items-center gap-4">
-<div className="hidden md:flex gap-6">
-            <Link href="/services" className="text-sm font-medium hover:text-primary transition">
-              {isArabic ? "الخدمات" : "Services"}
-            </Link>
-            <Link href="/articles" className="text-sm font-medium hover:text-primary transition">
-              {isArabic ? "المقالات" : "Articles"}
-            </Link>
-            <Link href="/faq" className="text-sm font-medium hover:text-primary transition">
-              {t.faq}
-            </Link>
-            <a href="#about" className="text-sm font-medium hover:text-primary transition">
-              {t.about}
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition">
-              {t.contact}
-            </a>
-            </div>
-            
-      <Link href="/" className="text-sm font-medium hover:text-primary transition">
+            <Link href="/" className="text-sm font-medium hover:text-primary transition">
               {t.home}
             </Link>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-muted transition"
-              title={theme === "light" ? "Dark mode" : "Light mode"}
-            >
-              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-            </button>
-            
             <button
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
               className="px-3 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition"

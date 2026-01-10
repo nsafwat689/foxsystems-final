@@ -2,7 +2,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, Calendar, User, Tag, Moon, Sun } from "lucide-react";
+import { ArrowRight, Calendar, User, Tag } from "lucide-react";
 import { useState } from "react";
 
 interface Article {
@@ -136,12 +136,11 @@ export default function Articles() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <img src="/fox_systems_logo_matching.png" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
+            <img src="/logo.jpg" alt="Fox Systems" className="h-10 w-10 rounded-lg" />
             <span className="font-bold text-lg text-primary hidden sm:inline">Fox Systems</span>
           </Link>
 
-          150
-          
+          <div className="flex items-center gap-4">
             <Link href="/" className="text-sm font-medium hover:text-primary transition">
               {t.home}
             </Link>
@@ -158,7 +157,9 @@ export default function Articles() {
               {language === "en" ? "العربية" : "EN"}
             </button>
           </div>
-</nav>
+        </div>
+      </nav>
+
       {/* Header Section */}
       <section className="bg-gradient-to-br from-primary/10 via-transparent to-primary/5 py-16 md:py-24">
         <div className="container">

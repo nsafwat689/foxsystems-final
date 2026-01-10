@@ -9,7 +9,6 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Articles from "./pages/Articles";
 import ArticleDetail from "./pages/ArticleDetail";
-import FAQ from "./pages/FAQ";
 
 function Router() {
   return (
@@ -23,7 +22,6 @@ function Router() {
       <Route path={`/article/:articleId`}>
         {({ articleId }) => <ArticleDetail articleId={articleId} />}
       </Route>
-              <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
